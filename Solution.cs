@@ -10,13 +10,10 @@ namespace basicDS6
 {
     class Solution
     {
-        //public int ScheduleCourse(int[][] courses)
-        //{
-
-        //}
         static void Main()
         {
             Solution p = new Solution();
+
         }
     }
 }
