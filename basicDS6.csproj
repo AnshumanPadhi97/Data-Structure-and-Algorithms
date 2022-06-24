@@ -9,18 +9,14 @@
 
   <ItemGroup>
     <Folder Include="Algorithms and Templates\Sorting\" />
-    <Folder Include="Solutions\Graph\" />
     <Folder Include="Solutions\DP\" />
     <Folder Include="Solutions\Bit manipulation\" />
     <Folder Include="Solutions\Backtracking\" />
     <Folder Include="Solutions\Binary Search\" />
     <Folder Include="Solutions\Linked List\" />
     <Folder Include="Solutions\Monotonic Stack\" />
-    <Folder Include="Solutions\Tree\" />
     <Folder Include="Solutions\Trie\" />
-    <Folder Include="Solutions\String\" />
     <Folder Include="Solutions\Queue\" />
-    <Folder Include="Solutions\Stack\" />
     <Folder Include="Solutions\Sliding Window\" />
   </ItemGroup>
 
