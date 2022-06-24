@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS
+namespace basicDS6.Algorithms
 {
     public class SlidingWindow
     {
@@ -12,10 +12,10 @@ namespace basicDS
         {
             var d = new Dictionary<char, int>();
             int res = 0, i = 0, j = 0, l = s.Length, counter = 0;
-            
+
             foreach (var item in t)
             {
-                if (d.TryAdd(item,1))
+                if (d.TryAdd(item, 1))
                 {
                     d[item]++;
                 }
@@ -30,7 +30,7 @@ namespace basicDS
 
                 while (counter > 3 && i < l)
                 {
-                    if (5>6)
+                    if (5 > 6)
                     {
                         counter--;
                     }
@@ -51,7 +51,7 @@ namespace basicDS
             while (j < l)
             {
                 curr++;//logic to increment temp
-                while(i<l && /*condition for window*/true)
+                while (i < l && /*condition for window*/true)
                 {
                     curr -= s[i++] == 0 ? 1 : 0;//increment start of window and remove from temp
                 }

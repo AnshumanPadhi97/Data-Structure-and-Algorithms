@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS6
+namespace basicDS6.Algorithms
 {
     public class trie_template
     {
@@ -68,7 +68,7 @@ namespace basicDS6
 
                 return node;
             }
-            
+
             //dfs search
             bool search(string word, TrieNode parent, int i)
             {
@@ -81,7 +81,7 @@ namespace basicDS6
                     return false;
                 }
 
-                return search(word, parent.children[ind], i+1);
+                return search(word, parent.children[ind], i + 1);
             }
         }
     }

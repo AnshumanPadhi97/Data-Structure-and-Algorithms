@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS6
+namespace basicDS6.Algorithms
 {
     internal class priority_queue
     {
@@ -14,11 +14,6 @@ namespace basicDS6
 
             var q = new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x));//max heap
             var q1 = new PriorityQueue<int, int>(); //min heap
-            foreach (var item in a)
-            {
-                q.Enqueue(item, item);
-                q1.Enqueue(item, item);
-            }
         }
     }
 }

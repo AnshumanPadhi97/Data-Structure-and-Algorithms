@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS6
+namespace basicDS6.Algorithms
 {
     internal class z_array
     {

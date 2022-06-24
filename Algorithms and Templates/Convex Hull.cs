@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS6
+namespace basicDS6.Algorithms
 {
     internal class conver_hull_jarvis_marsh
     {
@@ -45,7 +45,7 @@ namespace basicDS6
             do
             {
                 var q = (p + 1) % trees.Length;
-                
+
                 for (int i = 0; i < trees.Length; i++)
                 {
                     if (orientation(trees[p], trees[i], trees[q]) < 0)
@@ -56,7 +56,7 @@ namespace basicDS6
 
                 for (int i = 0; i < trees.Length; i++)
                 {
-                    if(i!=p && i!=q && orientation(trees[p], trees[i], trees[q]) == 0 && inBetween(trees[p], trees[i], trees[q]))
+                    if (i != p && i != q && orientation(trees[p], trees[i], trees[q]) == 0 && inBetween(trees[p], trees[i], trees[q]))
                     {
                         hull.Add(trees[i]);
                     }

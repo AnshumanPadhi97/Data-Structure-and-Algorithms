@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS
+namespace basicDS6.Algorithms
 {
     class Permutation1
     {

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace basicDS6
+namespace basicDS6.Algorithms
 {
     public class Binary_search_template
     {
-        public bool Condition(int a,int b)
+        public bool Condition(int a, int b)
         {
             return false;
         }
@@ -21,7 +21,7 @@ namespace basicDS6
             while (lo < hi)
             {
                 int mid = lo + (hi - lo) / 2;
-                if (Condition(nums[mid],target))
+                if (Condition(nums[mid], target))
                 {
                     hi = mid;
                 }
