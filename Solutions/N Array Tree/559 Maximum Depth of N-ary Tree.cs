@@ -17,7 +17,7 @@ public class Node {
 }
 
 //bfs
-public class Solution
+public class Solution559
 {
     public int MaxDepthBFS(Node root)
     {
