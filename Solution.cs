@@ -10,6 +10,7 @@ namespace basicDS6
 {
     class Solution
     {
+
         static void Main()
         {
             Solution p = new Solution();
