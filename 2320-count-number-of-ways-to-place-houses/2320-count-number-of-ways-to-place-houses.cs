@@ -1,4 +1,4 @@
-public class Solution {
+public class Solution2320 {
     public int CountHousePlacements(int n) {
             var dp = new long[n + 10];
             dp[0] = 1;

@@ -5,7 +5,26 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>basicDS6.st</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="2316-count-unreachable-pairs-of-nodes-in-an-undirected-graph\**" />
+    <Compile Remove="2318-number-of-distinct-roll-sequences\**" />
+    <Compile Remove="2319-check-if-matrix-is-x-matrix\**" />
+    <Compile Remove="2320-count-number-of-ways-to-place-houses\**" />
+    <Compile Remove="9-palindrome-number\**" />
+    <EmbeddedResource Remove="2316-count-unreachable-pairs-of-nodes-in-an-undirected-graph\**" />
+    <EmbeddedResource Remove="2318-number-of-distinct-roll-sequences\**" />
+    <EmbeddedResource Remove="2319-check-if-matrix-is-x-matrix\**" />
+    <EmbeddedResource Remove="2320-count-number-of-ways-to-place-houses\**" />
+    <EmbeddedResource Remove="9-palindrome-number\**" />
+    <None Remove="2316-count-unreachable-pairs-of-nodes-in-an-undirected-graph\**" />
+    <None Remove="2318-number-of-distinct-roll-sequences\**" />
+    <None Remove="2319-check-if-matrix-is-x-matrix\**" />
+    <None Remove="2320-count-number-of-ways-to-place-houses\**" />
+    <None Remove="9-palindrome-number\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="0-Algorithms and Templates\Sorting\" />
