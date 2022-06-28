@@ -1,13 +1,13 @@
 public class Solution {
     public int MajorityElement(int[] nums) {
-        int l=nums.Length;
-        var d = new Dictionary<int,int>();
+        int c=0;
+        var res=0;
         foreach(var item in nums){
-            if(!d.ContainsKey(item)){
-                d.Add(item,0);
+            if(c==0){
+                res=item;
             }
-            d[item]++;
+            c+=res==item?1:-1;
         }
-        return d.Where(x=>x.Value>l/2).First().Key;
+        return res;
     }
 }
