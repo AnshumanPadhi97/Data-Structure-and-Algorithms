@@ -1,0 +1,1 @@
+BitArray only stores true false
