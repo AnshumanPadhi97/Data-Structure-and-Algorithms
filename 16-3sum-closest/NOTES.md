@@ -1,0 +1,1 @@
+take a result and compare for closest
