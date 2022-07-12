@@ -31,10 +31,10 @@ namespace basicDS6._0_Algorithms_and_Templates.Sorting
                 if (arr[j] < pivot)
                 {
                     i++;
-                    swap(arr, i, j);
+                    //swap(arr, i, j);
                 }
             }
-            swap(arr, i + 1, high);
+            //swap(arr, i + 1, high);
             return i + 1;
         }
     }
