@@ -1,1 +1,1 @@
-​
+//from j to i all numbers will create s<target so res+=j-i
