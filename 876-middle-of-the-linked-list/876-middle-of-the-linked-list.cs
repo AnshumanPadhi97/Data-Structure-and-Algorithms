@@ -12,7 +12,7 @@
 public class Solution {
     public ListNode MiddleNode(ListNode head) {
         var s = head;
-        var f=head;
+        var f = head;
         while(f!=null && f.next!=null){
             s=s.next;
             f=f.next.next;
