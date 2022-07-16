@@ -16,16 +16,23 @@ public class Solution {
         return h(root);
     }
     public int h(TreeNode root){
-        if(root==null)return 0;
         int res=0;
-        if(root.left!=null){
-            if(root.left.left==null && root.left.right==null){
-                res+=root.left.val;
-            }else{
-                res+=h(root.left);
+        if(root==null)return res;
+        var st = new Stack<TreeNode>();
+        st.Push(root);
+        while(st.Count>0){
+            var a = st.Pop();
+            if(a.left!=null){
+                if(a.left.left==null&&a.left.right==null){
+                    res+=a.left.val;
+                }else{
+                    st.Push(a.left);
+                }
+            }
+            if(a.right!=null){
+                st.Push(a.right);
             }
         }
-        res+=h(root.right);
         return res;
     }
 }
