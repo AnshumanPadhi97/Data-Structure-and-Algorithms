@@ -1,12 +1,10 @@
 public class Solution {
     public int[][] Merge(int[][] intervals) {
-            var res = new List<int[]>();
             Array.Sort(intervals, (a, b) => a[0].CompareTo(b[0]));
-            int l = intervals.Length;
+            var res = new List<int[]>();
             res.Add(intervals[0]);
-
             int j = 0;
-            for (int i = 1; i < l; i++)
+            for (int i = 1; i < intervals.Length; i++)
             {
                 if (intervals[i][0] <= res[j][1])
                 {
@@ -18,7 +16,6 @@ public class Solution {
                     j++;
                 }
             }
-
             return res.ToArray();
     }
 }
