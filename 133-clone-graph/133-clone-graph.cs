@@ -26,16 +26,16 @@ public class Solution {
         if(node==null)return null;
         var copy = new Node(node.val);
         var vis = new Node[101];
-        dfs(copy,node,vis);
+        dfs(node,copy,vis);
         return copy;
     }
-    public void dfs(Node copy,Node node,Node[] vis){
+    void dfs(Node node,Node copy,Node[] vis){
         vis[copy.val]=copy;
         foreach(var item in node.neighbors){
             if(vis[item.val]==null){
                 var a = new Node(item.val);
                 copy.neighbors.Add(a);
-                dfs(a,item,vis);
+                dfs(item,a,vis);
             }else{
                 copy.neighbors.Add(vis[item.val]);
             }
