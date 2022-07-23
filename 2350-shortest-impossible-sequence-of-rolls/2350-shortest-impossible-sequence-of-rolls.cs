@@ -1,11 +1,11 @@
 public class Solution {
     public int ShortestSequence(int[] rolls, int k) {
-            var h = new HashSet<int>();
             int res = 1;
-            foreach (var item in rolls)
+            var h = new HashSet<int>();
+            for (int i = 0; i < rolls.Length; i++)
             {
-                h.Add(item);
-                if(h.Count == k)
+                h.Add(rolls[i]);
+                if (h.Count == k)
                 {
                     res++;
                     h.Clear();
