@@ -1,17 +1,14 @@
 public class Solution {
-    public int UniquePaths(int m, int n) {
-        int[][] dp = new int[101][];
-        for(int i=0;i<101;i++){
-            dp[i]=new int[101];
-            for(int j=0;j<101;j++){
-                dp[i][j]=1;
-            }
+        int[,] dp = new int[101,101];
+        public int UniquePaths(int m, int n)
+        {
+            return h(new int[m, n], 0, 0,m,n);
         }
-        for(int i=1;i<m;i++){
-            for(int j=1;j<n;j++){
-                dp[i][j]=dp[i-1][j]+dp[i][j-1];
-            }   
+        public int h(int[,] g,int i,int j,int m,int n)
+        {
+            if (i >= m || j >= n ) return 0;
+            if (i == m - 1 && j == n - 1) return 1;
+            if(dp[i,j]>0)return dp[i,j];
+            return dp[i,j]=h(g, i+1, j, m, n) + h(g, i, j+1, m, n);
         }
-        return dp[m-1][n-1];
-    }
 }

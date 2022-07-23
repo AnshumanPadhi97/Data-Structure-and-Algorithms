@@ -1,19 +1,21 @@
 public class Solution {
-    public bool SearchMatrix(int[][] matrix, int t) {
-        var m = matrix.Length;
-        var n = matrix[0].Length;
-        int lo=0,hi=n-1;
-        while(lo<m && hi>=0){
-            Console.WriteLine(matrix[lo][hi]);
-            if(matrix[lo][hi]==t){
-                return true;
+    public bool SearchMatrix(int[][] matrix, int target) {
+            int lo = 0, hi = matrix[0].Length-1;
+            while (lo<matrix.Length && hi>=0)
+            {
+                if (matrix[lo][hi] == target)
+                {
+                    return true;
+                }
+                else if (matrix[lo][hi]>target)
+                {
+                    hi--;
+                }
+                else
+                {
+                    lo++;
+                }
             }
-            else if(matrix[lo][hi]>t){
-                hi--;
-            }else{
-                lo++;
-            }
-        }
-        return false;
+            return false;
     }
 }

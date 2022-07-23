@@ -6,9 +6,9 @@ public class Solution {
     }
     public int h(TreeNode root){
         if(root==null)return 0;
-        int l =h(root.left);
-        int r =h(root.right);
-        res=Math.Max(res,l+r);
-        return Math.Max(l,r)+1;
+        int l = h(root.left);
+        int r = h(root.right);
+        res=Math.Max(l+r,res);
+        return 1+Math.Max(l,r);
     }
 }

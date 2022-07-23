@@ -1,11 +1,11 @@
 public class Solution {
-    IList<IList<int>> res = new List<IList<int>>();
     public IList<IList<int>> LevelOrder(TreeNode root) {
+        var res = new List<IList<int>>();
         if(root==null)return res;
-        var q =new Queue<TreeNode>();
+        var q = new Queue<TreeNode>();
         q.Enqueue(root);
         while(q.Count>0){
-            int l = q.Count;
+            var l = q.Count;
             var ls = new List<int>();
             while(l-->0){
                 var a = q.Dequeue();
@@ -15,7 +15,7 @@ public class Solution {
                 }
                 if(a.right!=null){
                     q.Enqueue(a.right);
-                }   
+                }
             }
             res.Add(ls.ToList());
         }

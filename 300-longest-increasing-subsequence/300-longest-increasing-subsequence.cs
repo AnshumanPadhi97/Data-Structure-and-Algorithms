@@ -1,7 +1,7 @@
 public class Solution {
     public int LengthOfLIS(int[] nums) {
-            int l = nums.Length;
-            int[] dp = new int[l];
+            var l = nums.Length;
+            var dp = new int[l];
             Array.Fill(dp, 1);
             for (int i = 1; i < l; i++)
             {

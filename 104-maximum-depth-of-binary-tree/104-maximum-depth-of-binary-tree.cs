@@ -1,21 +1,22 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 public class Solution {
     public int MaxDepth(TreeNode root) {
+        var q = new Queue<TreeNode>();
         if(root==null)return 0;
-        int l = MaxDepth(root.left);
-        int r = MaxDepth(root.right);
-        return Math.Max(l,r)+1;
+        q.Enqueue(root);
+        int res=0;
+        while(q.Count>0){
+            res++;
+            var l = q.Count;
+            while(l-->0){
+                var a = q.Dequeue();
+                if(a.left!=null){
+                    q.Enqueue(a.left);
+                }
+                if(a.right!=null){
+                    q.Enqueue(a.right);
+                }
+            }
+        }
+        return res;
     }
 }
