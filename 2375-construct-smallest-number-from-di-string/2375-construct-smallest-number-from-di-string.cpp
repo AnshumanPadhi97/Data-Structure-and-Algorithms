@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool check(string s,string t){
+    bool check(string& s,string& t){
         for (int i = 1; i < t.size(); i++)
         {
             if(t[i]>t[i-1] && s[i-1]!='I')return false;
