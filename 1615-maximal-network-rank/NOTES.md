@@ -1,1 +1,1 @@
-note The network rank of two different cities is defined as the total number of directly connected roads to either city. If a road is directly connected to both cities, it is only counted once.
+​
