@@ -1,17 +1,13 @@
 public class Solution {
     public int[] SumZero(int n) {
-            var res = new List<int>();
-
-            for (int i = 1; i <= n / 2; i++)
-            {
-                res.Add(i);
-                res.Add(-i);
-            }
-            if (n % 2 != 0)
-            {
-                res.Add(0);
-            }
-            
-            return res.ToArray();
+        var res = new List<int>();
+        int l = n/2;
+        for(int i=-l;i<=l;i++){
+            res.Add(i);
+        }
+        if(n%2==0){
+            res.Remove(0);
+        }
+        return res.ToArray();
     }
 }
