@@ -14,16 +14,24 @@
 public class Solution {
     IList<IList<int>> res = new List<IList<int>>();
     public IList<IList<int>> LevelOrder(TreeNode root) {
-        h(root,0);
-        return res;
-    }
-    public void h(TreeNode root,int l){
-        if(root==null)return;
-        if(res.Count==l){
-            res.Add(new List<int>());
+        if(root==null)return res;
+        var q = new Queue<TreeNode>();
+        q.Enqueue(root);
+        while(q.Count>0){
+            var l = q.Count;
+            var temp = new List<int>();
+            while(l-->0){
+                var a = q.Dequeue();
+                temp.Add(a.val);
+                if(a.left!=null){
+                    q.Enqueue(a.left);
+                }
+                if(a.right!=null){
+                    q.Enqueue(a.right);
+                }
+            }
+            res.Add(temp.ToList());
         }
-        res[l].Add(root.val);
-        h(root.left,l+1);
-        h(root.right,l+1);
+        return res;
     }
 }
