@@ -12,15 +12,19 @@
  * }
  */
 public class Solution {
-    List<int> res = new List<int>();
     public IList<int> InorderTraversal(TreeNode root) {
-        h(root);
+        var res=new List<int>();
+        if(root==null) return res;
+        var st = new Stack<TreeNode>();
+        while(root!=null || st.Count>0){
+            while(root!=null){
+                st.Push(root);
+                root=root.left;
+            }
+            root = st.Pop();
+            res.Add(root.val);
+            root=root.right;
+        }
         return res;
-    }
-    public void h(TreeNode root){
-        if(root==null)return;
-        h(root.left);
-        res.Add(root.val);
-        h(root.right);
     }
 }
