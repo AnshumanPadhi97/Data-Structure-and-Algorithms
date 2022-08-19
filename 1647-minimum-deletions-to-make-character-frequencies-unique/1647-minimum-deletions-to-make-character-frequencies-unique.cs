@@ -1,29 +1,26 @@
 public class Solution {
     public int MinDeletions(string s) {
+            var f = new int[26];
+            for (int i = 0; i < s.Length; i++)
+            {
+                f[s[i] - 'a']++;
+            }
+            var h = new HashSet<int>();
             int res = 0;
-            int[] a = new int[26];
-            foreach (var item in s)
+            for (int i = 0; i < 26; i++)
             {
-                a[item - 'a']++;
-            }
-            var pq = new PriorityQueue<int, int>(Comparer<int>.Create((a,b)=>b.CompareTo(a)));
-            foreach (var item in a)
-            {
-                if (item > 0)
+                if (!h.Contains(f[i]))
                 {
-                    pq.Enqueue(item, item);
+                    h.Add(f[i]);
                 }
-            }
-            while (pq.Count > 1)
-            {
-                int top = pq.Dequeue();
-                if(top == pq.Peek())
+                else
                 {
-                    if (top - 1 > 0)
+                    while (f[i]>0 && h.Contains(f[i]))
                     {
-                        pq.Enqueue(top - 1, top - 1);
+                        res++;
+                        f[i]--;
                     }
-                    res++;
+                    h.Add(f[i]);
                 }
             }
             return res;
