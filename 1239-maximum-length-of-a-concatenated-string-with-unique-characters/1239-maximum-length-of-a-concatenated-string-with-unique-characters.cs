@@ -1,34 +1,36 @@
 public class Solution {
-        int n;
-        string[] words;
-        int max = 0;
+        int res = 0;
         public int MaxLength(IList<string> arr)
         {
-            words = new HashSet<string>(arr).ToArray();
-            n = words.Length;
-            dfs(0, "");
-            return max;
+            var ls = arr.ToHashSet().ToList();
+            dfs(ls, "",0);
+            return res;
         }
-
-        void dfs(int start, string curr)
+        public void dfs(List<string> ls,string temp,int st)
         {
-            max = Math.Max(curr.Length, max);
-
-            for (int end = start; end < n; end++)
+            res = Math.Max(res, temp.Length);
+            for (int i = st; i < ls.Count; i++)
             {
-                var sub = $"{curr}{words[end]}";
-                if (!IsUnique(sub)) continue;
-                dfs(end + 1, sub);
+                var s = $"{temp}{ls[i]}";
+                if (!check(s))
+                {
+                    continue;
+                }
+                else
+                {
+                    dfs(ls, s, i + 1);
+                }
             }
         }
-
-        bool IsUnique(string s)
+        public bool check(string a)
         {
-            char[] ca = new char[26];
-            foreach (char ch in s)
+            var f = new int[26];
+            for (int i = 0; i < a.Length; i++)
             {
-                if (ca[ch - 'a']++ > 0)
+                if(f[a[i] - 'a']++ > 0)
+                {
                     return false;
+                }
             }
             return true;
         }
