@@ -1,40 +1,19 @@
 public class Solution {
-    public void swap(char[] s,int i,int j)
-    {
-        var a = s[i];
-        s[i] = s[j];
-        s[j] = a;
-    }
     public int MinMovesToMakePalindrome(string s) {
-            int n = s.Length;
             int res = 0;
-            var a = s.ToCharArray();
-
-            int left = 0, right = s.Length - 1;
-            while (left < right)
+            while (s.Length > 0)
             {
-                int l = left, r = right;
-                while (a[l] != a[r])
+                int i = s.IndexOf(s[s.Length - 1]);
+                if (i == s.Length-1)
                 {
-                    r--;
-                }
-                if (l == r)
-                {
-                    swap(a, r, r + 1);
-                    res++;
-                    continue;
+                    res += i / 2;
                 }
                 else
                 {
-                    while (r < right)
-                    {
-                        swap(a, r, r + 1);
-                        res++;
-                        r++;
-                    }
+                    res += i;
+                    s = s.Substring(0, i) + s.Substring(i + 1);
                 }
-                left++;
-                right--;
+                s = s.Substring(0, s.Length - 1);
             }
             return res;
     }
