@@ -17,9 +17,11 @@ namespace basicDS6
         static void Main()
         {
             st p = new st();
-            Console.WriteLine(p.check(new int[] {1,3,2,4},new int[] {4,2,4}));
+            Console.WriteLine(p.check(new int[] { 2, 4, 1, 6, 5, 9, 7 }));
+            Console.WriteLine(p.check(new int[] { 4, 3, 2, 6, 1 }));
+            Console.WriteLine(p.check(new int[] { 2, 1, 6, 4, 3, 7 }));
         }
-        public int check(int[] a, int[] b)
+        public int check(int[] a)
         {
 
         }
