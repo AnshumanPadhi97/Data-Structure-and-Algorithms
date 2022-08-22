@@ -20,6 +20,5 @@ namespace basicDS6
             st p = new st();
 
         }
-
     }
 }
