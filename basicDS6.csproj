@@ -37,10 +37,12 @@
     <Compile Remove="127-word-ladder\**" />
     <Compile Remove="128-longest-consecutive-sequence\**" />
     <Compile Remove="129-sum-root-to-leaf-numbers\**" />
+    <Compile Remove="1293-shortest-path-in-a-grid-with-obstacles-elimination\**" />
     <Compile Remove="13-roman-to-integer\**" />
     <Compile Remove="1304-find-n-unique-integers-sum-up-to-zero\**" />
     <Compile Remove="1306-jump-game-iii\**" />
     <Compile Remove="131-palindrome-partitioning\**" />
+    <Compile Remove="1329-sort-the-matrix-diagonally\**" />
     <Compile Remove="133-clone-graph\**" />
     <Compile Remove="1338-reduce-array-size-to-the-half\**" />
     <Compile Remove="134-gas-station\**" />
@@ -154,6 +156,9 @@
     <Compile Remove="238-product-of-array-except-self\**" />
     <Compile Remove="2381-shifting-letters-ii\**" />
     <Compile Remove="2384-largest-palindromic-number\**" />
+    <Compile Remove="2389-longest-subsequence-with-limited-sum\**" />
+    <Compile Remove="2390-removing-stars-from-a-string\**" />
+    <Compile Remove="2391-minimum-amount-of-time-to-collect-garbage\**" />
     <Compile Remove="240-search-a-2d-matrix-ii\**" />
     <Compile Remove="241-different-ways-to-add-parentheses\**" />
     <Compile Remove="242-valid-anagram\**" />
@@ -175,6 +180,7 @@
     <Compile Remove="32-longest-valid-parentheses\**" />
     <Compile Remove="320-generalized-abbreviation\**" />
     <Compile Remove="322-coin-change\**" />
+    <Compile Remove="326-power-of-three\**" />
     <Compile Remove="328-odd-even-linked-list\**" />
     <Compile Remove="33-search-in-rotated-sorted-array\**" />
     <Compile Remove="338-counting-bits\**" />
@@ -183,6 +189,7 @@
     <Compile Remove="342-power-of-four\**" />
     <Compile Remove="355-design-twitter\**" />
     <Compile Remove="36-valid-sudoku\**" />
+    <Compile Remove="363-max-sum-of-rectangle-no-larger-than-k\**" />
     <Compile Remove="367-valid-perfect-square\**" />
     <Compile Remove="376-wiggle-subsequence\**" />
     <Compile Remove="377-combination-sum-iv\**" />
@@ -190,6 +197,7 @@
     <Compile Remove="38-count-and-say\**" />
     <Compile Remove="380-insert-delete-getrandom-o1\**" />
     <Compile Remove="381-insert-delete-getrandom-o1-duplicates-allowed\**" />
+    <Compile Remove="383-ransom-note\**" />
     <Compile Remove="387-first-unique-character-in-a-string\**" />
     <Compile Remove="389-find-the-difference\**" />
     <Compile Remove="39-combination-sum\**" />
@@ -251,6 +259,7 @@
     <Compile Remove="733-flood-fill\**" />
     <Compile Remove="739-daily-temperatures\**" />
     <Compile Remove="74-search-a-2d-matrix\**" />
+    <Compile Remove="743-network-delay-time\**" />
     <Compile Remove="746-min-cost-climbing-stairs\**" />
     <Compile Remove="75-sort-colors\**" />
     <Compile Remove="759-employee-free-time\**" />
@@ -269,6 +278,7 @@
     <Compile Remove="858-mirror-reflection\**" />
     <Compile Remove="86-partition-list\**" />
     <Compile Remove="863-all-nodes-distance-k-in-binary-tree\**" />
+    <Compile Remove="869-reordered-power-of-2\**" />
     <Compile Remove="871-minimum-number-of-refueling-stops\**" />
     <Compile Remove="876-middle-of-the-linked-list\**" />
     <Compile Remove="890-find-and-replace-pattern\**" />
@@ -362,10 +372,12 @@
     <EmbeddedResource Remove="127-word-ladder\**" />
     <EmbeddedResource Remove="128-longest-consecutive-sequence\**" />
     <EmbeddedResource Remove="129-sum-root-to-leaf-numbers\**" />
+    <EmbeddedResource Remove="1293-shortest-path-in-a-grid-with-obstacles-elimination\**" />
     <EmbeddedResource Remove="13-roman-to-integer\**" />
     <EmbeddedResource Remove="1304-find-n-unique-integers-sum-up-to-zero\**" />
     <EmbeddedResource Remove="1306-jump-game-iii\**" />
     <EmbeddedResource Remove="131-palindrome-partitioning\**" />
+    <EmbeddedResource Remove="1329-sort-the-matrix-diagonally\**" />
     <EmbeddedResource Remove="133-clone-graph\**" />
     <EmbeddedResource Remove="1338-reduce-array-size-to-the-half\**" />
     <EmbeddedResource Remove="134-gas-station\**" />
@@ -479,6 +491,9 @@
     <EmbeddedResource Remove="238-product-of-array-except-self\**" />
     <EmbeddedResource Remove="2381-shifting-letters-ii\**" />
     <EmbeddedResource Remove="2384-largest-palindromic-number\**" />
+    <EmbeddedResource Remove="2389-longest-subsequence-with-limited-sum\**" />
+    <EmbeddedResource Remove="2390-removing-stars-from-a-string\**" />
+    <EmbeddedResource Remove="2391-minimum-amount-of-time-to-collect-garbage\**" />
     <EmbeddedResource Remove="240-search-a-2d-matrix-ii\**" />
     <EmbeddedResource Remove="241-different-ways-to-add-parentheses\**" />
     <EmbeddedResource Remove="242-valid-anagram\**" />
@@ -500,6 +515,7 @@
     <EmbeddedResource Remove="32-longest-valid-parentheses\**" />
     <EmbeddedResource Remove="320-generalized-abbreviation\**" />
     <EmbeddedResource Remove="322-coin-change\**" />
+    <EmbeddedResource Remove="326-power-of-three\**" />
     <EmbeddedResource Remove="328-odd-even-linked-list\**" />
     <EmbeddedResource Remove="33-search-in-rotated-sorted-array\**" />
     <EmbeddedResource Remove="338-counting-bits\**" />
@@ -508,6 +524,7 @@
     <EmbeddedResource Remove="342-power-of-four\**" />
     <EmbeddedResource Remove="355-design-twitter\**" />
     <EmbeddedResource Remove="36-valid-sudoku\**" />
+    <EmbeddedResource Remove="363-max-sum-of-rectangle-no-larger-than-k\**" />
     <EmbeddedResource Remove="367-valid-perfect-square\**" />
     <EmbeddedResource Remove="376-wiggle-subsequence\**" />
     <EmbeddedResource Remove="377-combination-sum-iv\**" />
@@ -515,6 +532,7 @@
     <EmbeddedResource Remove="38-count-and-say\**" />
     <EmbeddedResource Remove="380-insert-delete-getrandom-o1\**" />
     <EmbeddedResource Remove="381-insert-delete-getrandom-o1-duplicates-allowed\**" />
+    <EmbeddedResource Remove="383-ransom-note\**" />
     <EmbeddedResource Remove="387-first-unique-character-in-a-string\**" />
     <EmbeddedResource Remove="389-find-the-difference\**" />
     <EmbeddedResource Remove="39-combination-sum\**" />
@@ -576,6 +594,7 @@
     <EmbeddedResource Remove="733-flood-fill\**" />
     <EmbeddedResource Remove="739-daily-temperatures\**" />
     <EmbeddedResource Remove="74-search-a-2d-matrix\**" />
+    <EmbeddedResource Remove="743-network-delay-time\**" />
     <EmbeddedResource Remove="746-min-cost-climbing-stairs\**" />
     <EmbeddedResource Remove="75-sort-colors\**" />
     <EmbeddedResource Remove="759-employee-free-time\**" />
@@ -594,6 +613,7 @@
     <EmbeddedResource Remove="858-mirror-reflection\**" />
     <EmbeddedResource Remove="86-partition-list\**" />
     <EmbeddedResource Remove="863-all-nodes-distance-k-in-binary-tree\**" />
+    <EmbeddedResource Remove="869-reordered-power-of-2\**" />
     <EmbeddedResource Remove="871-minimum-number-of-refueling-stops\**" />
     <EmbeddedResource Remove="876-middle-of-the-linked-list\**" />
     <EmbeddedResource Remove="890-find-and-replace-pattern\**" />
@@ -687,10 +707,12 @@
     <None Remove="127-word-ladder\**" />
     <None Remove="128-longest-consecutive-sequence\**" />
     <None Remove="129-sum-root-to-leaf-numbers\**" />
+    <None Remove="1293-shortest-path-in-a-grid-with-obstacles-elimination\**" />
     <None Remove="13-roman-to-integer\**" />
     <None Remove="1304-find-n-unique-integers-sum-up-to-zero\**" />
     <None Remove="1306-jump-game-iii\**" />
     <None Remove="131-palindrome-partitioning\**" />
+    <None Remove="1329-sort-the-matrix-diagonally\**" />
     <None Remove="133-clone-graph\**" />
     <None Remove="1338-reduce-array-size-to-the-half\**" />
     <None Remove="134-gas-station\**" />
@@ -804,6 +826,9 @@
     <None Remove="238-product-of-array-except-self\**" />
     <None Remove="2381-shifting-letters-ii\**" />
     <None Remove="2384-largest-palindromic-number\**" />
+    <None Remove="2389-longest-subsequence-with-limited-sum\**" />
+    <None Remove="2390-removing-stars-from-a-string\**" />
+    <None Remove="2391-minimum-amount-of-time-to-collect-garbage\**" />
     <None Remove="240-search-a-2d-matrix-ii\**" />
     <None Remove="241-different-ways-to-add-parentheses\**" />
     <None Remove="242-valid-anagram\**" />
@@ -825,6 +850,7 @@
     <None Remove="32-longest-valid-parentheses\**" />
     <None Remove="320-generalized-abbreviation\**" />
     <None Remove="322-coin-change\**" />
+    <None Remove="326-power-of-three\**" />
     <None Remove="328-odd-even-linked-list\**" />
     <None Remove="33-search-in-rotated-sorted-array\**" />
     <None Remove="338-counting-bits\**" />
@@ -833,6 +859,7 @@
     <None Remove="342-power-of-four\**" />
     <None Remove="355-design-twitter\**" />
     <None Remove="36-valid-sudoku\**" />
+    <None Remove="363-max-sum-of-rectangle-no-larger-than-k\**" />
     <None Remove="367-valid-perfect-square\**" />
     <None Remove="376-wiggle-subsequence\**" />
     <None Remove="377-combination-sum-iv\**" />
@@ -840,6 +867,7 @@
     <None Remove="38-count-and-say\**" />
     <None Remove="380-insert-delete-getrandom-o1\**" />
     <None Remove="381-insert-delete-getrandom-o1-duplicates-allowed\**" />
+    <None Remove="383-ransom-note\**" />
     <None Remove="387-first-unique-character-in-a-string\**" />
     <None Remove="389-find-the-difference\**" />
     <None Remove="39-combination-sum\**" />
@@ -901,6 +929,7 @@
     <None Remove="733-flood-fill\**" />
     <None Remove="739-daily-temperatures\**" />
     <None Remove="74-search-a-2d-matrix\**" />
+    <None Remove="743-network-delay-time\**" />
     <None Remove="746-min-cost-climbing-stairs\**" />
     <None Remove="75-sort-colors\**" />
     <None Remove="759-employee-free-time\**" />
@@ -919,6 +948,7 @@
     <None Remove="858-mirror-reflection\**" />
     <None Remove="86-partition-list\**" />
     <None Remove="863-all-nodes-distance-k-in-binary-tree\**" />
+    <None Remove="869-reordered-power-of-2\**" />
     <None Remove="871-minimum-number-of-refueling-stops\**" />
     <None Remove="876-middle-of-the-linked-list\**" />
     <None Remove="890-find-and-replace-pattern\**" />
