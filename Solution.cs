@@ -8,6 +8,7 @@ using System.Collections;
 using System.Numerics;
 using System.Text.RegularExpressions;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.ConstrainedExecution;
 
 namespace basicDS6
 {
@@ -20,5 +21,6 @@ namespace basicDS6
             st p = new st();
 
         }
+
     }
 }
