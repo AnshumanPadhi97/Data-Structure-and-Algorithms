@@ -8,29 +8,24 @@ public:
         for (auto &&c : s)
         {
             if(isdigit(c)){
-                num = num*10+(c-'0');//build the number
+                num = num*10+(c-'0');
             }
             else if(isalpha(c)){
-                res.push_back(c);//build the string
+                res.push_back(c);
             }
             else if(c=='['){
-                //we can push all number and encoded_string to their stacks
                 nums.push(num);
                 chars.push(res);
-                
-                res="";//reset for another string building
+                res="";
                 num=0;
             }
             else if(c==']'){
-                // every time we see ']' we are guaranteed to have finished a set of 
-                // k[encoded_string]. Hence we can start processing the stacks emptying
-                // them and moving it to res. 
                 string temp = res;
                 for (int i = 0; i < nums.top()-1; i++)
                 {
-                    res+=temp;//repeat
+                    res+=temp;
                 }
-                res=chars.top()+res;//get previous decoded string from stack and put in front
+                res=chars.top()+res;
                 chars.pop();
                 nums.pop();
             }
