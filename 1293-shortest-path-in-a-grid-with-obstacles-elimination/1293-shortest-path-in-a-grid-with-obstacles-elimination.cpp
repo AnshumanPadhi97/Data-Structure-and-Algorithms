@@ -6,7 +6,8 @@ public:
     
     vector<vector<int>> vis(m,vector<int>(n,-1));
     queue<vector<int>> q;
-
+    
+        // queue stores (x,y,current path length,number of obstacles we can still remove)
     q.push({0,0,0,k});
     while (!q.empty())
     {
@@ -26,7 +27,8 @@ public:
                 continue;
             }
         }
-
+        // The cell was previously visited by some path and we were able to remove more obstacles from the previous path.
+		// Then we don't need to continue on our current path
         if(vis[x][y]!=-1 && vis[x][y]>=t[3]){
             continue;
         }
