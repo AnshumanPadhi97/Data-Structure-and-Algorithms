@@ -19,23 +19,30 @@ typedef long double lld;
 #define no cout<<"NO"
 
 /*------------------------------------------------------------------------------*/
-void _print(ll t) {cout << t;}
-void _print(int t) {cout << t;}
-void _print(string t) {cout << t;}
-void _print(char t) {cout << t;}
-void _print(lld t) {cout << t;}
-void _print(double t) {cout << t;}
-void _print(ull t) {cout << t;}
+#ifdef ONLINE_JUDGE
+#define debug(x) cerr << #x<<" "; _print(x); cerr << endl;
+#else
+#define debug(x);
+#endif
+
+void _print(ll t) {cerr << t;}
+void _print(int t) {cerr << t;}
+void _print(string t) {cerr << t;}
+void _print(char t) {cerr << t;}
+void _print(lld t) {cerr << t;}
+void _print(double t) {cerr << t;}
+void _print(ull t) {cerr << t;}
+
 template <class T, class V> void _print(pair <T, V> p);
 template <class T> void _print(vector <T> v);
 template <class T> void _print(set <T> v);
 template <class T, class V> void _print(map <T, V> v);
 template <class T> void _print(multiset <T> v);
-template <class T, class V> void _print(pair <T, V> p) {_print(p.first); cout << ","; _print(p.second);}
-template <class T> void _print(vector <T> v) {for (T i : v) {_print(i); cout << " ";}}
-template <class T> void _print(set <T> v) {for (T i : v) {_print(i); cout << " ";}}
-template <class T> void _print(multiset <T> v) {for (T i : v) {_print(i); cout << " ";}}
-template <class T, class V> void _print(map <T, V> v) {for (auto i : v) {_print(i); cout << " ";}}
+template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.first); cerr << ","; _print(p.second); cerr << "}";}
+template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 /*------------------------------------------------------------------------------*/
@@ -54,19 +61,23 @@ ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) %
 ll mod_sub(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a - b) % m) + m) % m;}
 ll mod_div(ll a, ll b, ll m) {a = a % m; b = b % m; return (mod_mul(a, mminvprime(b, m), m) + m) % m;}  //only for prime m
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
+ll fact[1000001]; void factorial(){ fact[0]=fact[1]=1; for (int i = 2; i <= 1000001; i++) { fact[i]=(i*fact[i-1]*1ll)%(ll)(INF32); } } 
+ll nck(ll n, ll k){ if(k>n)return 0; ll res = fact[n]; res = (res * 1ll * expo(fact[k],INF32-2,INF32))%(ll)(INF32); res = (res * 1ll * expo(fact[n-k],INF32-2,INF32))%(ll)(INF32); return res; }
+
 
 /*------------------------------------------------------------------------------*/
 
-
 void solve(int tc){
-
+    
 }
 
 int main()
 {
     fastread();
-    int t;
-    cin>>t;
+    #ifndef ONLINE_JUDGE
+        freopen("Error.txt","w",stderr);
+    #endif
+    int t; cin>>t;
     for (int i = 1; i <= t; i++)
     {
         solve(i);

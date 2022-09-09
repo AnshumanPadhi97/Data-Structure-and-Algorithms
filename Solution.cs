@@ -14,13 +14,16 @@ namespace basicDS6
 {
     public class st
     {
-        private int MOD = 1000000007;
+
 
         static void Main()
         {
             st p = new st();
-
+            p.h();
         }
-
+        public void h()
+        {
+            Console.WriteLine("a");
+        }
     }
 }
