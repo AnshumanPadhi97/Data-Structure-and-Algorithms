@@ -67,6 +67,6 @@ public:
                 res+=connections[i][2];
             }
         }
-        return n == 1 ? res : -1;
+        return u.components-1 == 1 ? res : -1;
     }
 };
