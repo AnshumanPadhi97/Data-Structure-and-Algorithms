@@ -1,15 +1,18 @@
 class Solution {
 public:
     int minGroups(vector<vector<int>>& intervals) {
-        sort(begin(intervals),end(intervals));
-        priority_queue<int,vector<int>,greater<int>> q;
+        map<int,int> m;
         for (auto &&i : intervals)
         {
-            if(!q.empty() && q.top()<i[0]){
-                q.pop();
-            }
-            q.push(i[1]);
+            m[i[0]]++;
+            m[i[1]+1]--;
+        }      
+        int sum=0, maxi = 0;
+        for (auto &&i : m)
+        {
+            sum+=i.second;
+            maxi=max(maxi,sum);
         }
-        return q.size();
+        return maxi;
     }
 };
