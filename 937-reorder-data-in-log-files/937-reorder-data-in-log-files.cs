@@ -1,32 +1,31 @@
 public class Solution {
-    public string[] ReorderLogFiles(string[] logs) {
-        
-        var digitLog = new List<string>();
-        var aplhabetLog = new List<string>();
-
-        foreach (var log in logs){
-            if (Char.IsDigit(log.Split(' ')[1][0])) 
-                digitLog.Add(log);
-            else 
-                aplhabetLog.Add(log);   
-        }
-
-        aplhabetLog.Sort(new LogComparetorWord());
-        aplhabetLog.AddRange(digitLog);
-    
-        return aplhabetLog.ToArray();
-    }
-    
-    public class LogComparetorWord: IComparer<String>
-    {
-        public int Compare(String x, String y)
+        public string[] ReorderLogFiles(string[] logs)
         {
-            string[] log1 = x.Split(new char[] { ' ' }, 2);
-            string[] log2 = y.Split(new char[] { ' ' }, 2);
-
-            var cmp = log1[1].CompareTo(log2[1]);
-            if (cmp != 0) return cmp;
-            else return log1[0].CompareTo(log2[0]);
+            var d = new List<string>();
+            var l = new List<string>();
+            foreach (var item in logs)
+            {
+                if(char.IsDigit(item.Split(' ')[1][0])){
+                    d.Add(item);
+                }
+                else
+                {
+                    l.Add(item);
+                }
+            }
+            l.Sort(new comp());
+            l.AddRange(d);
+            return l.ToArray();
         }
-    }
+        public class comp : IComparer<string>
+        {
+            public int Compare(string a,string b)
+            {
+                var l1 = a.Split(' ', 2);//identifier, content
+                var l2 = b.Split(' ', 2);
+                var c = l1[1].CompareTo(l2[1]);//compare contents
+                if (c != 0) return c;
+                else return l1[0].CompareTo(l2[0]);//if same content then compare identifier
+            }
+        }
 }
