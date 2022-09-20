@@ -14,10 +14,12 @@ public class Solution {
                 var a = q.Dequeue();   
                 if(a==endWord)return res;
                 
-                for(int j=0;j<a.Length;j++){
-                    for(int k='a';k<='z';k++){
+                for(int j=0;j<a.Length;j++)
+                {
+                    for(char k='a';k<='z';k++)
+                    {
                         var b=a.ToCharArray();
-                        b[j]=(char)k;
+                        b[j]=k;
                         
                         var s = new string(b);
                         if(h.Contains(s) && !vis.Contains(s)){
@@ -27,7 +29,7 @@ public class Solution {
                     }
                 }
             }
-            res+=1;
+            res++;
         }
         
         return 0;
