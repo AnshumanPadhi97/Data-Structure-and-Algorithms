@@ -1,26 +1,7 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-typedef unsigned long long ull;
-typedef long double lld;
-#define all(v) v.begin(), v.end()
-#define revall(v) v.rbegin(), v.rend()
-#define setbits __builtin_popcountll
-#define nline "\n"
-#define MOD1 (int)998244353
-#define INF64 (ll)1e18
-#define INF32 (int)1e9+7
-#define yes cout<<"YES"
-#define no cout<<"NO"
-
 class Solution {
 public:
     int res=0;
     int dir[5]{0,1,0,-1,0};
-    bool isValidCell(vector<vector<int>>& G, int i, int j) {
-        return i >= 0 && j >= 0 && i < G.size() && j < G[0].size() && G[i][j] != -1 && G[i][j] != 3;
-    }
     void dfs(vector<vector<int>>& grid,int x,int y,int vis){
         if(x<0||y<0||x>=grid.size()||y>=grid[0].size()||grid[x][y]==-1||grid[x][y]==3)return;
         if(grid[x][y]==2){
