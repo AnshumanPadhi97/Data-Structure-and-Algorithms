@@ -9,21 +9,17 @@ using System.Numerics;
 using System.Text.RegularExpressions;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.ConstrainedExecution;
+using System.Globalization;
 
 namespace basicDS6
 {
     public class st
     {
-
-
         static void Main()
         {
             st p = new st();
-            p.h();
-        }
-        public void h()
-        {
-            Console.WriteLine("a");
+
+
         }
     }
 }
