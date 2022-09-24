@@ -1,15 +1,20 @@
 public class Solution {
+    
     IList<IList<int>> res = new List<IList<int>>();
-    public IList<IList<int>> PathSum(TreeNode root, int targetSum) {
-        dfs(root,targetSum,new List<int>());
+        
+    public IList<IList<int>> PathSum(TreeNode root, int t) 
+    {
+        dfs(root,t,new List<int>());
         return res;
     }
-    public void dfs(TreeNode root,int t,List<int> temp){
-        if(root==null)return;
+    
+    public void dfs(TreeNode root, int t, List<int> temp)
+    {
+        if(root==null) return;
         
         temp.Add(root.val);
         
-        if(root.val==t && root.left==null&&root.right==null)
+        if(root.left==null && root.right==null && root.val==t)
         {
             res.Add(temp.ToList());
         }
