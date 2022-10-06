@@ -1,28 +1,35 @@
 class Solution {
 public:
-    
-    unordered_set<TreeNode*> s;
     int res=0;
-    
-    void dfs(TreeNode* root,TreeNode* parent){
+    int needCamera = -1, covered = 0, haveCamera = 1;
+
+    int dfs(TreeNode* root){
+        if(!root) return covered;
         
-        if(root==NULL) return;
-        
-        dfs(root->left,root);
-        dfs(root->right,root);
-        
-        if(parent==NULL && s.find(root)==s.end() || s.find(root->left)==s.end() || s.find(root->right)==s.end()){
-            res++;
-            s.insert(root->left);
-            s.insert(root->right);
-            s.insert(parent);
-            s.insert(root);
+        int l = dfs(root->left);
+        int r = dfs(root->right);
+
+        if(l==covered && r==covered){
+            return needCamera;
         }
+
+        if(l==needCamera || r==needCamera){
+            res++;
+            return haveCamera;
+        }
+
+        if(l==haveCamera || r==haveCamera){
+            return covered;
+        }
+
+        return -1;
     }
-    
     int minCameraCover(TreeNode* root) {
-        s.insert(NULL);//leaf node is covered
-        dfs(root,NULL);
+        res=0;
+        int a = dfs(root);
+        if(a==needCamera){
+            res++;
+        }
         return res;
     }
 };
