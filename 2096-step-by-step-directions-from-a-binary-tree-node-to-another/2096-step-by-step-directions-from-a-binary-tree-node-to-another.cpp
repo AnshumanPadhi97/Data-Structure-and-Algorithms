@@ -1,26 +1,27 @@
 class Solution {
 public:
-    bool h(TreeNode* root, int val,string&path){
-        if(!root)return false;
-        if(root->val==val){
+    bool dfs(TreeNode* root,int s,string& p){
+        if(root->val==s){
             return true;
         }
-        if(root->left && h(root->left,val,path)){
-            path+='L';
+        if(root->left && dfs(root->left,s,p)){
+            p.push_back('L');
         }
-        else if(root->right && h(root->right,val,path)){
-            path+='R';
+        else if(root->right && dfs(root->right,s,p)){
+            p.push_back('R');
         }
-        return !path.empty();
+        return !p.empty();
     }
-    string getDirections(TreeNode* root, int startValue, int destValue) {
-        string a,b;
-        h(root,startValue,a);
-        h(root,destValue,b);
-        while(!a.empty() && !b.empty() && a.back()==b.back()){
-            a.pop_back();
-            b.pop_back();
+    string getDirections(TreeNode* root, int s, int d) {
+        string sp, dp;
+        
+        dfs(root,s,sp);
+        dfs(root,d,dp);
+        
+        while(!sp.empty() && !dp.empty() && sp.back()==dp.back()){
+            sp.pop_back();
+            dp.pop_back();
         }
-        return string(a.size(),'U') + string(rbegin(b),rend(b));
+        return string(sp.size(), 'U') + string(rbegin(dp), rend(dp));
     }
 };
