@@ -1,16 +1,29 @@
 class Solution {
 public:
-    int m, n;
-    
-    int dfs(vector<int>& nums, vector<int>& mult, vector<vector<int>>& dp, int i, int j) {
-        if (j == m) return 0;
-        if (dp[i][j] != INT_MIN) return dp[i][j];
-        return dp[i][j] = max( mult[j] * nums[i] + dfs(nums, mult, dp, i + 1, j + 1), mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, dp, i, j + 1)); 
+    int dp[1001][1001];
+    int dfs(vector<int>& nums, vector<int>& mults, int i, int l, int r)
+    {
+        if(i>=mults.size()) return 0;
+        
+        if(dp[l][i]!=1e9){
+            return dp[l][i];
+        }
+        
+        int a = (mults[i] * nums[l]) + dfs(nums,mults,i+1,l+1,r);
+        int b = (mults[i] * nums[r]) + dfs(nums,mults,i+1,l,r-1);
+        
+        return dp[l][i] = max(a,b);
     }
-    
     int maximumScore(vector<int>& nums, vector<int>& multipliers) {
-        n = (int) nums.size(), m = (int) multipliers.size();
-        vector<vector<int>> dp(m, vector<int>(m, INT_MIN));
-        return dfs(nums, multipliers, dp, 0, 0);
+        
+        for(int i=0; i<1000; i++)
+        {
+             for(int j=0; j<1000; j++)
+             {
+                 dp[i][j] = 1e9;
+             }
+        }
+        
+        return dfs(nums,multipliers,0,0,nums.size()-1);
     }
 };
