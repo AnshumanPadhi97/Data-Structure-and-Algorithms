@@ -17,10 +17,13 @@ public:
                 }
                 else if(s[0]==a[i]){
                     hasSameNum=true;
+                    if(i==l-1){
+                        res++;
+                    }
                 }
             }
             if(!hasSameNum) return res;
         }
-        return res+1;
+        return res;
     }
 };
