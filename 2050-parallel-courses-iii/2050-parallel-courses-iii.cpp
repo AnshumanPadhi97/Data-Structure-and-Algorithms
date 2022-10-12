@@ -1,37 +1,40 @@
 class Solution {
 public:
-    int minimumTime(int n, vector<vector<int>>& relations, vector<int>& time) {
-        vector<vector<int>> g(n,vector<int>());
-        vector<int> indegree(n);
+    
+    int dfs(int u,vector<int> *g,vector<int>& dp,vector<int>& time){
+        if(dp[u]!=-1) return dp[u];
         
-        for(auto i:relations){
-            indegree[i[1]-1]++;
-            g[i[0]-1].push_back(i[1]-1);
+        int curr=0;
+        for(auto i:g[u])
+        {
+            curr=max(curr,dfs(i,g,dp,time));
         }
         
-        vector<int> dist(n);
-        queue<int> q;
+        return dp[u]=curr+time[u];
+    }
+    
+    int minimumTime(int n, vector<vector<int>>& relations, vector<int>& time) {
+        vector<int> g[n+1];
+        set<int> s;
         
         for (int i = 0; i < n; i++)
         {
-            if(indegree[i]==0){
-                q.push(i);
-                dist[i]=time[i];
-            }
+            s.insert(i);
         }
         
-        while (!q.empty())
+        for(auto i:relations)
         {
-            int x = q.front();
-            q.pop();
-            for(auto v:g[x]){
-                dist[v]=max(dist[v],dist[x]+time[v]);//update distance
-                indegree[v]--;
-                if(indegree[v]==0){
-                    q.push(v);
-                }
-            }
+            g[i[0]-1].push_back(i[1]-1);
+            s.erase(i[1]-1);
         }
-        return *max_element(dist.begin(),dist.end());
+
+        int res=0;
+        
+        vector<int> dp(n,-1);
+        for(auto i: s){
+            res=max(res,dfs(i,g,dp,time));
+        }
+        
+        return res;
     }
 };
